@@ -46,7 +46,7 @@ export interface NgbModalOptions {
    *
    * If not specified, will be `body`.
    */
-  container?: string;
+  container?: string | HTMLElement;
 
   /**
    * The `Injector` to use for modal content.

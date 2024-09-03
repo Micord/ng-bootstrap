@@ -18,6 +18,7 @@ import {isDefined, isString} from '../util/util';
 import {NgbModalBackdrop} from './modal-backdrop';
 import {NgbActiveModal, NgbModalRef} from './modal-ref';
 import {NgbModalWindow} from './modal-window';
+import {NgbModalOptions} from './modal-config';
 
 @Injectable({providedIn: 'root'})
 export class NgbModalStack {
@@ -42,9 +43,10 @@ export class NgbModalStack {
     });
   }
 
-  open(moduleCFR: ComponentFactoryResolver, contentInjector: Injector, content: any, options): NgbModalRef {
-    const containerEl =
-        isDefined(options.container) ? this._document.querySelector(options.container) : this._document.body;
+  open(moduleCFR: ComponentFactoryResolver, contentInjector: Injector, content: any, options: NgbModalOptions): NgbModalRef {
+    const containerEl = options.container instanceof HTMLElement ? options.container : isDefined(options.container) ?
+                                                                                       this._document.querySelector(options.container) :
+                                                                                       this._document.body;
     const renderer = this._rendererFactory.createRenderer(null, null);
 
     const revertPaddingForScrollBar = this._scrollBar.compensate();
