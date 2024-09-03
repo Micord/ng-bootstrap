@@ -1,6 +1,6 @@
 {
   "name": "@ng-bootstrap/ng-bootstrap",
-  "version": "4.2.2",
+  "version": "4.2.2-micord.1",
   "description": "Angular powered Bootstrap",
   "keywords": [
     "angular",
@@ -28,6 +28,9 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ng-bootstrap/ng-bootstrap.git"
+  },
+  "publishConfig": {
+    "registry": "https://repo.micord.ru/repository/npm-private/"
   },
   "license": "MIT",
   "bugs": {
