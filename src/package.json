@@ -29,6 +29,9 @@
     "type": "git",
     "url": "git+https://github.com/ng-bootstrap/ng-bootstrap.git"
   },
+  "publishConfig": {
+    "registry": "https://repo.micord.ru/repository/npm-private/"
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/ng-bootstrap/ng-bootstrap/issues"
